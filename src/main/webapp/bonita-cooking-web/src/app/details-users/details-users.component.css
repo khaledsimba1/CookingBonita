@@ -1,0 +1,116 @@
+/* Conteneur des informations de l'utilisateur */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px; /* Ajustement de l'espacement entre les colonnes */
+  margin-top: 30px; 
+}
+
+/* Colonnes d'informations */
+.info-column {
+  flex: 1;
+}
+
+/* Séparateur de colonne */
+.column-separator {
+  border-right: 2px solid #ccc; 
+  height: auto;
+}
+
+/* Style des formulaires */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacement uniforme entre les éléments du formulaire */
+}
+
+/* Champs de formulaire */
+form label {
+  margin-bottom: 5px;
+  font-weight: bold; /* Mettre en valeur les labels */
+}
+
+form input, form select {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Coins arrondis pour une apparence plus moderne */
+  width: 100%; /* Largeur de 100% pour les champs */
+  box-sizing: border-box; /* Empêcher le dépassement des éléments */
+}
+
+/* Bouton principal */
+button.primary {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Coins arrondis pour le bouton */
+  transition: background-color 0.3s;
+}
+
+button.primary:hover {
+  background-color: #45a049;
+}
+
+/* Titre de la section "Modifier l'utilisateur" */
+h1.section-heading {
+  margin-bottom: 30px;
+}
+
+/* Mise en forme des informations utilisateur */
+h3.listing-user {
+  margin: 5px 0;
+  font-weight: normal; /* Pas de surbrillance pour ces titres */
+  padding: 5px 15px;
+}
+
+.listing-user {
+  padding: 5px 15px;
+  background-color: #f9f9f9; /* Fond légèrement grisé pour chaque ligne d'information */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+/* Disposition des recettes */
+.recettes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.recette-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.recette-column {
+  flex: 1 0 30%; 
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour chaque recette */
+}
+
+/* Pour les petits écrans (Responsive) */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column-separator {
+    display: none;
+  }
+
+  .info-column {
+    flex: 1;
+  }
+
+  .recette-column {
+    flex: 1 0 100%; /* Chaque recette occupe toute la largeur sur les petits écrans */
+  }
+}

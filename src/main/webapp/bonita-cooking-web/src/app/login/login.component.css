@@ -1,0 +1,80 @@
+/* Container général */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Assure que les éléments s'empilent verticalement */
+  position: relative;
+
+  padding-top: 70px; /* Pour éviter que la bannière bleue du haut chevauche */
+}
+
+/* Formulaire de connexion */
+.login-form {
+  display: grid;
+  gap: 14px;
+  max-width: 450px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 100%;
+  margin-top:55px; /* Pour supprimer la marge qui pourrait exister */
+  top: 0px; /* Monte légèrement le formulaire */
+}
+
+/* Formulaire de déconnexion */
+.logout-form {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 20;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+
+/* Inputs de formulaire */
+input[type="text"],
+input[type="password"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 90%;
+}
+
+/* Bouton */
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+/* Erreur */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Responsivité */
+@media (min-width: 500px) and (max-width: 768px) {
+  .login-form {
+    max-width: 80%;
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+}
+
+@media (max-width: 499px) {
+  .login-form {
+    max-width: 90%;
+  }
+}

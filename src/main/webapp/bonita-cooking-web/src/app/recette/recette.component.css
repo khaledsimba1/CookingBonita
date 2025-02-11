@@ -1,0 +1,35 @@
+.listing {
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 10px;
+
+}
+.listing-heading {
+  color: var(--primary-color);
+  padding: 10px 200px 5px 80px;
+}
+.listing-recette {
+  padding: 5px 15px;
+}
+
+.listing-ingredient {
+  padding: 5px 15px;
+  margin-left: 25px;
+}
+
+.listing-recette::before {
+  content: url("/assets/pin.svg") / "";
+}
+
+.listing-ingredient ::before {
+  content: url("/assets/angular.svg") / "";
+}
+section.listing a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
